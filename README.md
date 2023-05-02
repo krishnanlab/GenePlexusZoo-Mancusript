@@ -1,7 +1,7 @@
-# zoo_tmp
-These scripts are what were used to generate the findings in *Joint representation of molecular networks from multiple species improves gene classification*. The data generated for this manuscript was very large and computationally expensive to generate. These scripts provide the main code that was able to generate the results, however we don't provide computational support or HPC job scheduling code to reproduce the data in full.
+# GenePlexusZoo – Manuscript
+This repository contains the scripts used to generate the findings in the manuscript *Joint representation of molecular networks from multiple species improves gene classification*. The data for this manuscript were very large and computationally expensive to generate. While the scripts here provide the main code for generating the results, reproducing the data in full requires cluster computating resources and HPC job scheduling code, which are not provided here.
 
-## Package Versions
+## Package versions
 
 The code was tested with `python==3.8.3`.
 
@@ -15,28 +15,16 @@ sh get_data.sh
 
 ## File Structure
 
-In the `src` folder there is : 
+In the `src` folder contains the following subfolders with scripts for different stages of the analysis: 
 
-`01`  
+`01`: Processing the edgelists into downstream data.
 
-These scripts deal with directly processing the edgelists into downstream data.
+`02`: Making the feature matrices used in the machine learning models.  
 
-`02`
+`03`: Generating the main findings (Fig 2 and Fig 3).  
 
-These scripts make the feature matrices used in the machine learning models.  
+`04`: Generating results from the matched geneset collection (GSC) analyses.  
 
-`03`
+`05`: Generating results for training human disease models and looking at predictions across species. 
 
-These scripts generate the main findings (Fig 2 and Fig 3).  
-
-`04`
-
-These scripts generate results from the matched GSC analyses.  
-
-`05`
-
-These scripts generate results for training human disease models and looking at predictions across species.  
-
-`figure_code`
-
-This generates the figures contained in the manuscript.  
+`figure_code`: Generating the figures in the manuscript.  
