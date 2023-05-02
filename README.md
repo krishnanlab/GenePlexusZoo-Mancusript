@@ -8,7 +8,7 @@ The code was tested with `python==3.8.3`.
 `requirements.txt` contains packages used for all scripts except those that use `pecanpy`, whose pacakges can be found in `requirements_pecanpy.txt`.
 
 ### Data
-The data used in this study is available on [Zenodo](https://zenodo.org/record/3352348/). To get the data run
+The data used in this study is available on [Zenodo](the data available at https://zenodo.org/record/7888044). To get the data run
 ```
 sh get_data.sh
 ```
