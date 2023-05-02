@@ -15,16 +15,16 @@ sh get_data.sh
 
 ## File Structure
 
-In the `src` folder contains the following subfolders with scripts for different stages of the analysis: 
+The `src` folder contains the following subfolders with scripts for different stages of the analysis: 
 
-`01`: Processing the edgelists into downstream data.
+* `01`: Processing the edgelists into downstream data.
 
-`02`: Making the feature matrices used in the machine learning models.  
+* `02`: Making the feature matrices used in the machine learning models.  
 
-`03`: Generating the main findings (Fig 2 and Fig 3).  
+* `03`: Generating the main findings (Fig 2 and Fig 3).  
 
-`04`: Generating results from the matched geneset collection (GSC) analyses.  
+* `04`: Generating results from the matched geneset collection (GSC) analyses.  
 
-`05`: Generating results for training human disease models and looking at predictions across species. 
+* `05`: Generating results for training human disease models and looking at predictions across species. 
 
-`figure_code`: Generating the figures in the manuscript.  
+The `figure_code` folder contains the scripts to generate the figures in the manuscript.  
