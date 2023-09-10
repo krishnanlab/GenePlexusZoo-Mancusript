@@ -55,9 +55,9 @@ elif scaling == 'Scl':
 elif scaling == 'StdScl':
     adj_mat = (adj_mat - np.mean(adj_mat,axis=0)) / np.std(adj_mat,axis=0)
 else:
-    print('A wrong sclaing was put in')
+    print('A wrong scaling was put in')
     hjhkjhkgg
-print('The number of seconds it took to scale array is', time.time()-time_tmp)
+print('The number of seconds it took to scale the array is', time.time()-time_tmp)
 
 # set SVD and hard code some arguments
 
