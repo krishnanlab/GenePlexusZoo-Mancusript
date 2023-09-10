@@ -172,7 +172,7 @@ if __name__ == '__main__':
         print('The number of %s to %s connections added is'%(species1,species2),len(results))
     print()
     
-    print('Saving the connecitons file')
+    print('Saving the connections file')
     if weights == 'AllOnes':
         results = [item + ['1.0'] for item in results]
     elif weights == 'AllTwos':
@@ -188,10 +188,10 @@ if __name__ == '__main__':
         gene_cnt_dict = get_count_dict(results)
         results_new = []
         for aline in results:
-            # this sets how much total probabilty it will walk to the other species
+            # this sets how much total probability it will walk to the other species
             g1_weight = s1_deg_dict[aline[0]] * percent
             g2_weight = s2_deg_dict[aline[1]] * percent
-            # this dived the total probably across all connection to other species
+            # this divides the total probability across all connections to other species
             g1_weight = g1_weight / gene_cnt_dict[aline[0]]
             g2_weight = g2_weight / gene_cnt_dict[aline[1]]
             results_new.append([aline[0],aline[1],g1_weight])
@@ -199,7 +199,7 @@ if __name__ == '__main__':
         results = results_new
 
     else:
-        print('A unknown type was called so no weight column added')
+        print('An unknown type was called, hence weight column was not added.')
         dfsdfds
     df_final = pd.DataFrame(results)
     df_final = df_final.drop_duplicates()
@@ -209,7 +209,7 @@ if __name__ == '__main__':
                                                             header=False,float_format='%.3f')
     
         
-    print('The time is took to run this script is',time.time()-tic)
+    print('The time it took to run this script is',time.time()-tic)
 
 
 
