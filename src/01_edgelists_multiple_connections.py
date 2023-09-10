@@ -9,9 +9,9 @@ import glob
 import itertools
 
 '''
-This script will find generate a file with connections between more than one species.
-Note: Need to have AllOnes files from 01_edgelists_pairwise_connections.py 
-generated first if doing SummedDegree weighting scheme.
+This script will generate a file with connections between more than one species.
+Note: If a SummedDegree weighting scheme has to be performed, then the AllOnes files from
+01_edgelists_pairwise_connections.py must be generated first.
 '''
 
 
@@ -135,7 +135,7 @@ if __name__ == '__main__':
         df_cons = concat_cons(df_cons,fp_end_con)
     df_cons = df_cons.reset_index()
     all_genes = np.union1d(df_cons['Gene1'].unique(),df_cons['Gene2'].unique())
-    print('The total number of edges add after concatenation is',df_cons.shape)
+    print('The total number of edges present after concatenation is',df_cons.shape)
     print('The total number of unique genes after concatenation is',len(all_genes))
     print()
 
@@ -150,10 +150,10 @@ if __name__ == '__main__':
         for index, row in df_cons.iterrows():
             gene1 = '%i'%row['Gene1']
             gene2 = '%i'%row['Gene2']
-            # this sets how much total probabilty it will walk to the other specie
+            # this sets how much total probability it will walk to the other specie
             g1_weight = deg_dict[gene1] * percent
             g2_weight = deg_dict[gene2] * percent
-            # this dived the total probably across all connection to other specie
+            # this divides the total probability across all connection to other specie
             g1_weight = g1_weight / gene_cnt_dict[gene1]
             g2_weight = g2_weight / gene_cnt_dict[gene2]
             # add edges in both directions
@@ -161,7 +161,7 @@ if __name__ == '__main__':
             results_new.append([gene2,gene1,g2_weight])
         df_cons = pd.DataFrame(results_new)
     else:
-        print('A unknown type was called so no weight column added')
+        print('An unknown type was called so no weight column added')
         dfsdfds
     df_cons = df_cons.drop_duplicates()
     print('The shape of the final df is',df_cons.shape)
@@ -170,7 +170,7 @@ if __name__ == '__main__':
                                                   header=False,float_format='%.3f')
 
         
-    print('The time is took to run this script is',time.time()-tic)
+    print('The time it took to run this script is',time.time()-tic)
 
 
 
