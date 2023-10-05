@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# not part of the template
+*DS_Store
+data/**
+results/**
+figures/**
