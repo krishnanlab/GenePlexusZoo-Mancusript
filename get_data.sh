@@ -7,6 +7,7 @@ rm -rf data
 rm -rf results
 rm -rf figures
 
-wget https://zenodo.org/record/8411134/files/GenePlexusZooManuscript.tar.gz
+
+wget https://zenodo.org/record/10246207/files/GenePlexusZooManuscript.tar.gz
 tar -xvzf "GenePlexusZooManuscript.tar.gz" --strip-components=1
 rm -rf "GenePlexusZooManuscript.tar.gz"
