@@ -1,5 +1,5 @@
 # GenePlexusZoo – Manuscript
-This repository contains the scripts used to generate the findings in the manuscript *Joint representation of molecular networks from multiple species improves gene classification*. The data for this manuscript were very large and computationally expensive to generate. While the scripts here provide the main code for generating the results, reproducing the data in full requires cluster computating resources and HPC job scheduling code, which are not provided here.
+This repository contains the scripts used to generate the findings in the manuscript [*Joint representation of molecular networks from multiple species improves gene classification*](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011773). The data for this manuscript were very large and computationally expensive to generate. While the scripts here provide the main code for generating the results, reproducing the data in full requires cluster computating resources and HPC job scheduling code, which are not provided here.
 
 ## Package versions
 
@@ -8,8 +8,7 @@ The code was tested with `python==3.8.3`.
 `requirements.txt` contains packages used for all scripts except those that use `pecanpy`, whose pacakges can be found in `requirements_pecanpy.txt`.
 
 ### Data
-The data used in this study is available on [Zenodo](https://zenodo.org/record/7888044) `DOI: 10.5281/zenodo.7888044
-`. To get the data run
+The data used in this study is available on [Zenodo](https://zenodo.org/records/10246207) `DOI: 10.5281/zenodo.10246207`. To get the data run
 ```
 sh get_data.sh
 ```
